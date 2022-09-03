@@ -10,9 +10,9 @@ public class officeCard extends propertyCard{
     public officeCard(AnchorPane gameScreen) {
         //In the constructor, we will load up the default card
         ImageView card = createImage(CARD_PATH);
-        addImageToScreen(card,245,440,gameScreen);
+        addImageToScreen(card,245,520,gameScreen); //+100 from previous image
         Text office_txt = new Text("Office Lvl ");
         setFont(office_txt);
-        addTextToScreen(office_txt,320,480,gameScreen);
+        addTextToScreen(office_txt,320,560,gameScreen); //+40 from image
     }
 }

@@ -10,9 +10,9 @@ public class businessParkCard extends propertyCard{
     public businessParkCard(AnchorPane gameScreen) {
         //In the constructor, we will load up the default card
         ImageView card = createImage(CARD_PATH);
-        addImageToScreen(card,245,280,gameScreen);
+        addImageToScreen(card,245,320,gameScreen); //+100 from previous image
         Text bp_txt = new Text("BPark Lvl ");
         setFont(bp_txt);
-        addTextToScreen(bp_txt,320,320,gameScreen);
+        addTextToScreen(bp_txt,320,360,gameScreen); //+40 from image
     }
 }

@@ -37,12 +37,14 @@ public class menuButton extends Button {
 
     //pressed button is 4 pixels lower than the release button image
     private void buttonPressedStyle() {
+        setWrapText(true);
         setStyle(BUTTON_PRESSED_PATH);
         setHeight(45);
         setLayoutY(getLayoutY() + 4);
     }
 
     private void buttonReleasedStyle() {
+        setWrapText(true);
         setStyle(BUTTON_RELEASED_PATH);
         setHeight(49);
         setLayoutY(getLayoutY() - 4);

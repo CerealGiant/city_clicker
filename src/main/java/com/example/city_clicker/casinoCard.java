@@ -10,9 +10,9 @@ public class casinoCard extends propertyCard{
     public casinoCard(AnchorPane gameScreen) {
         //In the constructor, we will load up the default card
         ImageView card = createImage(CARD_PATH);
-        addImageToScreen(card,245,360,gameScreen);
+        addImageToScreen(card,245,420,gameScreen); //+100 from previous image
         Text casino_txt = new Text("Casino Lvl ");
         setFont(casino_txt);
-        addTextToScreen(casino_txt,320,400,gameScreen);
+        addTextToScreen(casino_txt,320,460,gameScreen); //+40 from image
     }
 }
