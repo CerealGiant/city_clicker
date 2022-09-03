@@ -66,29 +66,13 @@ public class View {
 
         //Adding blank property cards
         factoryCard fc = new factoryCard(gameScreen);
-
-        ImageView p2 = createImage("src/main/resources/com/example/city_clicker/wall.jpg");
-        p2.setLayoutX(190);
-        p2.setLayoutY(230);
-        gameScreen.getChildren().add(p2);
-
-        ImageView p3 = createImage("src/main/resources/com/example/city_clicker/wall.jpg");
-        p3.setLayoutX(190);
-        p3.setLayoutY(340);
-        gameScreen.getChildren().add(p3);
-
-        ImageView p4 = createImage("src/main/resources/com/example/city_clicker/wall.jpg");
-        p4.setLayoutX(190);
-        p4.setLayoutY(450);
-        gameScreen.getChildren().add(p4);
-
-
-        ImageView p5 = createImage("src/main/resources/com/example/city_clicker/wall.jpg");
-        p5.setLayoutX(190);
-        p5.setLayoutY(560);
-        gameScreen.getChildren().add(p5);
+        bankCard bc = new bankCard(gameScreen);
+        businessParkCard bpc = new businessParkCard(gameScreen);
+        casinoCard cc = new casinoCard(gameScreen);
+        officeCard oc = new officeCard(gameScreen);
 
     }
+
 
 
     //function that sets background of any given pane
