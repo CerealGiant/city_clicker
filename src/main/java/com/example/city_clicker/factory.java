@@ -4,7 +4,6 @@ public class factory extends building{
 
     private static factory instance = null;
 
-
     //Private constructor
     private factory() {
         super();
@@ -13,6 +12,7 @@ public class factory extends building{
         upgradeCost = (int)(purchaseCost*1.2);
     }
 
+
     //Static method to get the instance of factory.
     public static factory getInstance() {
         if (instance == null)
@@ -20,5 +20,9 @@ public class factory extends building{
         return instance;
     }
 
+    @Override
+    public void upgradeBuilding() {
+        System.out.println("test");
+    }
 
 }
