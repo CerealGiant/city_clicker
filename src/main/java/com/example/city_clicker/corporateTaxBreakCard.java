@@ -11,4 +11,9 @@ public class corporateTaxBreakCard extends propertyCard{
         ImageView card = createImage(CARD_PATH);
         addImageToScreen(card,490,230,gameScreen);
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

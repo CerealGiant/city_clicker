@@ -25,4 +25,5 @@ public class factory extends building{
         System.out.println("test");
     }
 
+
 }

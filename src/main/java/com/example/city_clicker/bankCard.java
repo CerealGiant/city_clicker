@@ -15,4 +15,9 @@ public class bankCard extends propertyCard{
         setFont(bank_txt);
         addTextToScreen(bank_txt,320,260,gameScreen); //+40 from image
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

@@ -28,6 +28,16 @@ public abstract class propertyCard {
         return v;
     }
 
+    public void updateImage(ImageView v,String IMAGE_PATH) {
+        Image i = null;
+        try {
+            i = new Image(new FileInputStream(IMAGE_PATH));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        v.setImage(i);
+    }
+
     public void setFont(Text t) {
 
         String FONT_PATH = "src/main/resources/com/example/city_clicker/game_font.ttf";
@@ -50,5 +60,7 @@ public abstract class propertyCard {
         v.setLayoutY(ypos);
         gameScreen.getChildren().add(v);
     }
+
+    public abstract void changeImage(String type);
 
 }

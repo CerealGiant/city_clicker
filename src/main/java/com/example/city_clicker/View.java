@@ -25,6 +25,10 @@ public class View {
     private AnchorPane gameScreen = null;
     private AnchorPane startMenu = null;
     private ArrayList<menuButton> startMenuButtons = new ArrayList<>();
+    private ArrayList<propertyCard> buildings = new ArrayList<>();
+    private ArrayList<upgradeButton> upgradePropertyButtons = new ArrayList<>();
+    private Text money_displayed = new Text();
+    private Button clicker = new Button();
 
     public View() {
         gameScreen = new AnchorPane();
@@ -71,9 +75,16 @@ public class View {
         //Setting the background of the game screen
         setBackground(GAMESCREEN_IMGPATH,gameScreen);
 
+        //Adding text that shows current money
+        setFont(money_displayed);
+        money_displayed.setText("0000");
+        money_displayed.setLayoutY(44);
+        money_displayed.setLayoutX(132);
+        gameScreen.getChildren().add(money_displayed);
+
 
         //Adding button to generate money upon click
-        Button clicker = new Button();
+
         String PATH = "-fx-background-color: transparent; \n" +
                 "-fx-background-image: url('file:src/main/resources/com/example/city_clicker/img.png')";
         clicker.setStyle(PATH);
@@ -142,23 +153,27 @@ public class View {
         casinoCard cc = new casinoCard(gameScreen);
         officeCard oc = new officeCard(gameScreen);
 
+        buildings.add(fc);
+        buildings.add(bc);
+        buildings.add(bpc);
+        buildings.add(cc);
+        buildings.add(oc);
+
 
         //Adding the upgrade buttons below each property card
-        Button upgrade_factory = new Button("Upgrade Factory");
-        upgrade_factory.setPrefWidth(228);
-        setFont(upgrade_factory);
-        upgrade_factory.setStyle("-fx-background-color: #CCFF00;");
-        upgrade_factory.setLayoutX(245);
-        upgrade_factory.setLayoutY(190);//+70 from image
-        gameScreen.getChildren().add(upgrade_factory);
+        upgradeButton upgrade_factory = new upgradeButton(245,190,gameScreen,"Factory");
+        upgradePropertyButtons.add(upgrade_factory);
 
-        Button upgrade_bank = new Button("Upgrade Bank");
-        upgrade_bank.setPrefWidth(228);
-        setFont(upgrade_bank);
-        upgrade_bank.setStyle("-fx-background-color: #CCFF00;");
-        upgrade_bank.setLayoutX(245);
-        upgrade_bank.setLayoutY(290);//+70 from image
-        gameScreen.getChildren().add(upgrade_bank);
+        upgradeButton upgrade_bank = new upgradeButton(245,290,gameScreen,"Bank");
+        upgradePropertyButtons.add(upgrade_bank);
+
+//        Button upgrade_bank = new Button("Upgrade Bank");
+//        upgrade_bank.setPrefWidth(228);
+//        setFont(upgrade_bank);
+//        upgrade_bank.setStyle("-fx-background-color: #CCFF00;");
+//        upgrade_bank.setLayoutX(245);
+//        upgrade_bank.setLayoutY(290);//+70 from image
+//        gameScreen.getChildren().add(upgrade_bank);
 
         Button upgrade_bpark = new Button("Upgrade Bsns Park");
         upgrade_bpark.setPrefWidth(228);
@@ -290,5 +305,23 @@ public class View {
 
     //returning the startMenu buttons
     public ArrayList<menuButton> getStartMenuButtons() {return startMenuButtons;}
+
+    //returning the propertyCards
+    public ArrayList<propertyCard> getBuildings() {return buildings;}
+
+    //returning the upgrade buttons below each property card
+    public ArrayList<upgradeButton> getUpgradePropertyButtons() {
+        return upgradePropertyButtons;
+    }
+
+    //setting the money_displayed
+    public void setMoneyDisplayedText(int money) {
+        money_displayed.setText(String.valueOf(money));
+    }
+
+    //getting the clicker
+    public Button getClicker() {
+        return clicker;
+    }
 
 }

@@ -11,4 +11,9 @@ public class savingsPlanCard extends propertyCard{
         ImageView card = createImage(CARD_PATH);
         addImageToScreen(card,490,340,gameScreen);
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

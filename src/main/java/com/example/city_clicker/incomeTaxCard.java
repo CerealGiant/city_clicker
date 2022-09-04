@@ -11,4 +11,9 @@ public class incomeTaxCard extends propertyCard{
         ImageView card = createImage(CARD_PATH);
         addImageToScreen(card,490,120,gameScreen);
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

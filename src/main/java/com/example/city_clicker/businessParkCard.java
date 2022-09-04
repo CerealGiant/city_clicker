@@ -15,4 +15,9 @@ public class businessParkCard extends propertyCard{
         setFont(bp_txt);
         addTextToScreen(bp_txt,320,360,gameScreen); //+40 from image
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

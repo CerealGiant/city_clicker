@@ -15,4 +15,9 @@ public class officeCard extends propertyCard{
         setFont(office_txt);
         addTextToScreen(office_txt,320,560,gameScreen); //+40 from image
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

@@ -16,18 +16,29 @@ public class startMenuButtons {
         private Stage s;
         private int SCREEN_WIDTH;
         private int SCREEN_HEIGHT;
+        private Model m;
 
-        public startGame(Pane dest,Stage s,int sw,int sh) {
+        public startGame(Pane dest,Stage s,int sw,int sh,Model m) {
             destPane = dest;
             this.s = s;
+            this.m = m;
             SCREEN_WIDTH = sw;
             SCREEN_HEIGHT = sh;
         }
 
         @Override
         public void execute() {
-            s.setScene(new Scene(destPane,SCREEN_WIDTH,SCREEN_HEIGHT));
+            Scene dest = new Scene(destPane,SCREEN_WIDTH,SCREEN_HEIGHT);
+            s.setScene(dest);
+
+            //Start the game's timer
+            //m.initGame();
+
+            //Update the view's value at the same time
+
+
         }
+
 
         @Override
         public void handle(ActionEvent actionEvent) {

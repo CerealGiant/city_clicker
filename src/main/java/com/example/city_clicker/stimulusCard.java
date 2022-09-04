@@ -12,4 +12,9 @@ public class stimulusCard extends propertyCard{
         ImageView card = createImage(CARD_PATH);
         addImageToScreen(card,490,450,gameScreen);
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }

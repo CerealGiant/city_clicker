@@ -15,4 +15,9 @@ public class casinoCard extends propertyCard{
         setFont(casino_txt);
         addTextToScreen(casino_txt,320,460,gameScreen); //+40 from image
     }
+
+    @Override
+    public void changeImage(String type) {
+
+    }
 }
