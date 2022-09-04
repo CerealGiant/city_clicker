@@ -1,11 +1,11 @@
 package com.example.city_clicker;
 
 public abstract class building {
-    private static boolean purchased;
-    private static int upgradeCost; //shows cost for the next level
-    private final int purchaseCost = 0;
-    private static int level = 1;
-    private static int incomePerSecond;
+    protected static boolean purchased;
+    protected static int upgradeCost; //shows cost for the next level
+    protected int purchaseCost = 0;
+    protected static int level = 1;
+    protected static int incomePerSecond;
 
 
     public building() {
@@ -48,7 +48,6 @@ public abstract class building {
     public boolean returnPurchased() {
         return purchased;
     }
-
 
     public void setPurchased(boolean p) {
         purchased = p;
